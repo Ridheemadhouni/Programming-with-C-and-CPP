@@ -1,15 +1,17 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     int choice;
     float num1, num2, result;
 
-    printf("Calculator Menu\n");
+    printf("======= Calculator Menu =========\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
     printf("3. Multiplication\n");
     printf("4. Division\n");
-    printf("Enter your choice (1-4): ");
+    printf("5. Power\n");
+    printf("Enter your choice (1-5): ");
     scanf("%d", &choice);
 
     printf("Enter two numbers: ");
@@ -36,6 +38,10 @@ int main() {
                 printf("Result = %.2f", num1 / num2);
             else
                 printf("Error! Division by zero.");
+            break;
+            case 5:
+            result = pow(num1,num2);
+            printf("result = %.2f",result);
             break;
 
         default:
